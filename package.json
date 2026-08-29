@@ -4,15 +4,16 @@
   "description": "TrustLayer API gateway and services (Express)",
   "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js",
-    "test": "jest",
-    "build": "node -e \"require('./src/app')\""
+    "start": "node init && node src/app.js",
+    "test": "NODE_ENV=test jest",
+    "build": "node init && node -e \"require('./src/app')\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "better-sqlite3": "^13.0.3",
     "cors": "^2.8.6",
     "express": "^5.2.1"
   },
